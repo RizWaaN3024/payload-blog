@@ -4,8 +4,8 @@ import { getPayload } from 'payload'
 import React from 'react'
 // import { fileURLToPath } from 'url'
 
-import config from '@/payload.config'
-import './styles.css'
+import config from '@/payload.config';
+import './globals.css';
 import Link from 'next/link'
 
 export default async function HomePage() {
@@ -33,7 +33,7 @@ export default async function HomePage() {
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{posts.map((post: any) => (
 					<React.Fragment key={post?.id}>
-						<h2>{post?.title}</h2>
+						<h2 className="bg-red-500 text-red-600">{post?.title}</h2>
 						<div className='relative h-10 w-10'>
 							<Image
 								src={post?.featuredImage?.url}
