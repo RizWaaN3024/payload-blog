@@ -16,24 +16,24 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
-	serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
-	admin: {
-		user: 'users'
-	},
-	collections: [Posts, Media, Categories, Users],
-	editor: lexicalEditor(),
-	secret: process.env.PAYLOAD_SECRET || '',
-	typescript: {
-		outputFile: path.resolve(dirname, 'payload-types.ts'),
-	},
-	db: postgresAdapter({
-		pool: {
-			connectionString: process.env.DATABASE_URI || '',
-		},
-	}),
-	sharp,
-	plugins: [
-		payloadCloudPlugin(),
-		// storage-adapter-placeholder
-	],
+    serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
+    admin: {
+        user: 'users'
+    },
+    collections: [Posts, Media, Categories, Users],
+    editor: lexicalEditor(),
+    secret: process.env.PAYLOAD_SECRET || '',
+    typescript: {
+        outputFile: path.resolve(dirname, 'payload-types.ts'),
+    },
+    db: postgresAdapter({
+        pool: {
+            connectionString: process.env.DATABASE_URI || '',
+        },
+    }),
+    sharp,
+    plugins: [
+        payloadCloudPlugin(),
+        // storage-adapter-placeholder
+    ],
 })
