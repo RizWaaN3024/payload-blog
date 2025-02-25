@@ -29,7 +29,6 @@ export default async function HomePage() {
 						<div className='relative h-10 w-10'>
 							<Image
 								src={post?.featuredImage?.url}
-								// fill
 								width={250}
 								height={250}
 								alt={post?.featuredImage?.alt}
