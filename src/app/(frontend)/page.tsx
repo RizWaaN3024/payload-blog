@@ -18,6 +18,7 @@ export default async function HomePage() {
 		},
 		depth: 2
 	})
+
 	// const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 	return (
 		<div className="container mx-auto px-4 py-8">
