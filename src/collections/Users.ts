@@ -9,11 +9,14 @@ export const Users: CollectionConfig = {
 	access: {
 		read: () => true
 	},
+
 	fields: [
+
 		{
 			name: 'name',
 			type: 'text'
 		},
+
 		{
 			name: 'roles',
 			type: 'select',
